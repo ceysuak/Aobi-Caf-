@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Bungee&family=Cal+Sans&family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+Primary (#7BB661) → Logo, main headings, key buttons.
+
+Secondary (#F5F3E7) → Page backgrounds, cards, sections.
+
+Accent (#A67B5B) → Call-to-action buttons, links, important info.
+
+Neutral (#3E3E3E) → Text content, paragraphs, footer.
+
+Highlight (#C5E1A5) → Small hover effects, borders, decorative lines.
+*/
+
+:root{
+  --primary-color:#7BB661;
+  --secondary-color:#F5F3E7;
+  --accent-color:#A67B5B;
+  --neutral-color:#3E3E3E;
+  --highlight:#C5E1A5;
+}
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary-color);
+  
+}
+
+/* NAVBAR STYLING*/
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-evenly; /* left + right side */
+  align-items: center;           /* vertically center items */
+  background-color:var(--highlight);     /* black navbar */
+  padding: 1rem 2rem;
+ 
+  flex-wrap: wrap;
+}
+
+/* Left side: logo + text */
+.logo-container {
+  display: flex;
+  align-items: center;           /* vertically center image + text */
+  gap: 0.5rem;                   /* space between img and h1 */
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+/* Navbar links container */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;                     
+  margin: 0;
+  padding: 0;
+}
+
+/* Links inside li */
+.nav-links ul li a {
+  text-decoration: none;
+  color: var(--neutral-color) ;               
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: color 0.3s;
+
+}
+
+.nav-links ul li a:hover {
+  color:black;   
+  border-bottom: 2px solid var(--accent-color);
+}
+.call-act a{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 1rem;
+}
+
+/*HEADING*/
+.heading{
+  background: url(pics/barista.webp);
+  background-size:cover;
+  height: 93vh;
+  color:var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0.3rem 0.3rem  0.3rem var(--neutral-color);
+}
+.heading h1{
+font-size: xx-large;
+}
+
+.heading .heading-button{
+  background-color: transparent ;
+  border: 0.1rem solid var(--secondary-color);
+  color: var(--secondary-color);
+    backdrop-filter: blur(10px);          /* blur the background behind the button */
+  -webkit-backdrop-filter: blur(10px); 
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  font-weight: bolder;
+  transition: 0.3s ease 0.1s;
+}
+.heading .heading-button:hover{
+  cursor: pointer;
+  transform: scale(1.07);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+              0 0 20px rgba(255, 255, 255, 0.6);
+
+}
+
+
+.about-container{
+  
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  
+}
+.item >h2{
+  color: var(--neutral-color);
+}
+.item >p{
+ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.about-container .item{
+  font-size: medium;
+  text-align: justify;
+  width: 50%;
+  
+}
+.about-container .item > img{
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.category-container {
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  height: 50vh;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.category-container >*{
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem grey;
+  color: var(--highlight);
+  text-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0);
+
+}
+.food  {
+  background-image: url("pics/club-sandwich1.jpg");
+  background-size: cover;
+  backdrop-filter: blur(10px);
+ width: 13rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.drink{
+  background-image: url("pics/coffeeee.jpg");
+  background-size: cover;
+  backdrop-filter: blur(10px);
+ width: 13rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.special{
+  background-image: url("pics/desert1.jpg");
+  background-size: cover;
+  
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.category-container > *:hover{
+  opacity: 0.9;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+footer{
+  background-color: var(--accent-color);
+  color: var(--neutral-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer > .socials >*{
+  color: var(--neutral-color);
+  text-decoration: none;
+}
+
+@media (max-width:1278px){
+  .about-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
+  .about-container .item{
+  font-size: medium;
+  text-align: justify;
+  width: 70%;
+  
+}
+.category-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+}
+
